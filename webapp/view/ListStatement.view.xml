@@ -1,0 +1,38 @@
+<mvc:View controllerName="polar.zui5statement.controller.ListStatement"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="pageListStatement" title="{i18n>title}">
+        <Table id="tableSalaryStatement" items="{path: 'liststatement>/results', sorter:{path: 'liststatement>Seqnr', descending: true}}">
+            <headerToolbar>
+                <Toolbar>
+                    <ToolbarSpacer/>
+                    <SearchField id="searchField" tooltip="{i18n>periodo}" search="onFilterPeriodos" width="auto" class="sapUiSmallMargin"></SearchField>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Label text="{i18n>periodo}"/>
+                </Column>
+                <Column minScreenWidth="Tablet">
+                    <Label text="{i18n>tpago}"/>
+                </Column>
+                <Column minScreenWidth="Tablet">
+                    <Label text="{i18n>bruto}" textAlign="Right"/>
+                </Column>
+                <Column>
+                    <Label text="{i18n>neto}" textAlign="Right"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem type="Navigation" press="onListStatementPress">
+                    <cells>
+                        <Text text="{liststatement>Perio}"/>
+                        <Text text="{liststatement>Motiv}"/>
+                        <ObjectNumber number="{liststatement>Bruto}" textAlign="Right" state="Warning"></ObjectNumber>
+                        <ObjectNumber number="{liststatement>Netop}" textAlign="Right" state="Success"></ObjectNumber>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>

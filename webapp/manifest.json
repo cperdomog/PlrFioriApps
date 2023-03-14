@@ -1,0 +1,142 @@
+{
+  "_version": "1.17.0",
+  "sap.app": {
+    "id": "polar.zui5statement",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.8.4",
+      "toolsId": "82bdd12c-1ff7-4763-93b6-0faf42114992"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.71.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "polar.zui5statement.i18n.i18n"
+        }
+      },
+      "liststatement": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ListStatement.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
+			"detailstatement": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/DetailStatement.json",
+				"settings": {
+					"defaultBindingMode": "TwoWay"
+				}
+			}
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "polar.zui5statement.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "liststatement",
+          "target": [
+            "liststatement"
+          ]
+        },
+        {
+          "pattern": "DetailState",
+          "name": "detailstatement",
+          "target": [
+            "detailstatement"
+          ]
+        }
+      ],
+      "targets": {
+        "liststatement": {
+          "viewName": "ListStatement",
+          "viewId": "liststatement",
+          "viewLevel": 1,
+          "title": "{i18n>ListStatementViewTitle}"
+        },
+        "detailstatement": {
+          "viewName": "DetailStatement",
+          "viewId": "detailstatement",
+          "viewLevel": 2,
+          "title": "{i18n>DetailStatementViewTitle}"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "polar.zui5statement.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

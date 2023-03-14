@@ -1,0 +1,15 @@
+<mvc:View controllerName="polar.zui5statement.controller.DetailStatement"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="pagepageDetailStatament" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <ScrollContainer height="100%" width="100%" horizontal="true" vertical="true">
+            <FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+                <PDFViewer id="reciboPdf" height="600px">
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </PDFViewer>
+            </FlexBox>
+        </ScrollContainer>
+    </Page>
+</mvc:View>
