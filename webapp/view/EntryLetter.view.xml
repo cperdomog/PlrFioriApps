@@ -1,0 +1,27 @@
+<mvc:View controllerName="polar.zui5letter.controller.EntryLetter"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="pageEntryLetter" title="{i18n>title}">
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm id="Form1" editable="false" layout="ResponsiveGridLayout" title="Seleccione una opción">
+                <f:content>
+                    <RadioButtonGroup id="rbg1" width="100%" class="sapUiMediumMarginBottom">
+                        <RadioButton id="consuel" text="{i18n>consuel}"/>
+                        <RadioButton id="sinsuel" text="{i18n>sinsuel}"/>
+                        <RadioButton id="trimest" text="{i18n>trimest}"/>
+                        <RadioButton id="semestr" text="{i18n>semestr}"/>
+                        <RadioButton id="anual" text="{i18n>anual}"/>
+                    </RadioButtonGroup>
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="{i18n>vercarta}" type="Emphasized" icon="sap-icon://pdf-attachment"  press="onGetPdf"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
