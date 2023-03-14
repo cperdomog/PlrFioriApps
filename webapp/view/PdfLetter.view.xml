@@ -1,0 +1,16 @@
+<mvc:View controllerName="polar.zui5certingret.controller.PdfLetter"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <ScrollContainer id="SContainer" height="100%" width="100%" horizontal="true" vertical="true">
+            <FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+                <PDFViewer id="letterPdf" height="600px" >
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </PDFViewer>
+            </FlexBox>
+        </ScrollContainer>
+        <MessagePage id="messagePage" showHeader="false" text="Servicio no disponible" icon="sap-icon://message-warning" description="Valide con departamento de RRHH"/>
+    </Page>
+</mvc:View>
