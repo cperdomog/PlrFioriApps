@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZHR_CO_FIORI_ESS_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZHRS_CO_UI_LIST_RECIBOS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Seqnr"/>
+                </Key>
+                <Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Nº de secuencia" sap:creatable="false"/>
+                <Property Name="Perio" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10" sap:creatable="false"/>
+                <Property Name="Tperi" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 caracteres" sap:creatable="false"/>
+                <Property Name="Fpbeg" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fe.inic.perío.p." sap:creatable="false"/>
+                <Property Name="Fpend" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fe.fin.Per.para" sap:creatable="false"/>
+                <Property Name="Bondt" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha pago" sap:creatable="false"/>
+                <Property Name="Ocrsn" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Motiv.nóm.espec" sap:creatable="false"/>
+                <Property Name="Motiv" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 caracteres" sap:creatable="false"/>
+                <Property Name="Bruto" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false"/>
+                <Property Name="Deduc" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false"/>
+                <Property Name="Netop" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_PDF" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Tipof"/>
+                    <PropertyRef Name="Clave"/>
+                </Key>
+                <Property Name="Tipof" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Componente del número de versión" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clave" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Comentario" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mimetype" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZHRT_UI_C_IN_RET" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Begda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Válido de"/>
+                <Property Name="Endda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Válido a"/>
+                <Property Name="Activ" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Activo/Inactivo"/>
+                <Property Name="Formu" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Formulario"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_DEP_FUE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Begda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Endda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Typem" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Componente del número de versión"/>
+                <Property Name="Messa" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char"/>
+            </EntityType>
+            <EntityContainer Name="ZHR_CO_FIORI_ESS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZHRS_CO_UI_LIST_RECIBOSSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_LIST_RECIBOS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_PDFSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_PDF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRT_UI_C_IN_RETSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRT_UI_C_IN_RET" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_DEP_FUESet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_DEP_FUE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://p0pswverp11.netpolar.com:8291/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://p0pswverp11.netpolar.com:8291/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

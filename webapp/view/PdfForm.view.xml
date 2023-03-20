@@ -1,0 +1,15 @@
+<mvc:View controllerName="polar.zuidepretfuent.controller.PdfForm"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="pagePdfForm" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <ScrollContainer height="100%" width="100%" horizontal="true" vertical="true">
+            <FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+                <PDFViewer id="formPdf" height="600px">
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </PDFViewer>
+            </FlexBox>
+        </ScrollContainer>
+    </Page>
+</mvc:View>

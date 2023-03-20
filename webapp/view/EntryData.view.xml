@@ -1,0 +1,27 @@
+<mvc:View controllerName="polar.zuidepretfuent.controller.EntryData"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:u="sap.ui.unified"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns ="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm id="Form1" editable="false" layout="ResponsiveGridLayout" title="Datos de entrada" singleContainerFullSize="true" columnsXL="1" columnsL="1" columnsM="1">
+                <u:Calendar id="calendar" select="handleCalendarSelect" intervalSelection="true"/>
+                <Label id="begda" text="Fecha de inicio" class="labelMarginLeft" />
+                <Text id="selectedDateFrom" text="{i18n>noDateSelected}" class="labelMarginLeft"/>
+                <Label id="endda" text="Fecha fin" class="labelMarginLeft" />
+                <Text id="selectedDateTo" text="{i18n>noDateSelected}" class="labelMarginLeft"/>                    
+            </f:SimpleForm>
+        </VBox>
+        <MessageStrip class="sapUiSmallMarginBegin" type="Information" showIcon="true" text="{i18n>note}" />
+            
+
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="{i18n>verForm}" type="Emphasized" icon="sap-icon://pdf-attachment" press="onProcessData"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>
