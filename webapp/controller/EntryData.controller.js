@@ -82,7 +82,6 @@ sap.ui.define([
                             var oRouter = sap.ui.core.UIComponent.getRouterFor(myThis),
                                 bReplace = true;
                             oRouter.navTo("pdfform", {}, bReplace);
-
                         }
                     },
                     error: function () {
