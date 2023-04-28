@@ -1,0 +1,25 @@
+{
+	"default": {
+		"_sap_ui_dt_Overlay_FocusColor": "#000",
+		"_sap_ui_dt_Overlay_TargetZoneColor": "#ae6042",
+		"_sap_ui_dt_Overlay_SelectionColor": "#96bfe8",
+		"_sap_ui_dt_Overlay_CuttedColor": "#f9f1f0",
+		"_sap_ui_dt_Overlay_CuttedBorder": "#ae6042",
+		"_sap_ui_dt_Overlay_HighlightColor": "#ae6042",
+		"_sap_ui_dt_Overlay_ActiveBG": "rgba(174,96,66,0.1)",
+		"_sap_ui_dt_ContextMenu_HoverBGColor": "rgba(178,178,178,0.5)",
+		"_sap_ui_dt_ContextMenu_OpenMenuBGColor": "#f6ede9"
+	},
+	"scopes": {
+		"sapContrast": {
+			"_sap_ui_dt_Overlay_FocusColor": "#fff",
+			"_sap_ui_dt_Overlay_TargetZoneColor": "#f69e92",
+			"_sap_ui_dt_Overlay_CuttedColor": "#60423e",
+			"_sap_ui_dt_Overlay_CuttedBorder": "#f69e92",
+			"_sap_ui_dt_Overlay_HighlightColor": "#eff4f9",
+			"_sap_ui_dt_Overlay_ActiveBG": "rgba(246,158,146,0.1)",
+			"_sap_ui_dt_ContextMenu_HoverBGColor": "rgba(152,101,98,0.5)",
+			"_sap_ui_dt_ContextMenu_OpenMenuBGColor": "#8a4f47"
+		}
+	}
+}
