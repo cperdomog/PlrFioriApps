@@ -48,4 +48,4 @@ server:
       afterMiddleware: fiori-tools-appreload
       configuration:
         component: polar.zui5letter
-        ui5Theme: sap_belize
+        ui5Theme: custom_belize_2
