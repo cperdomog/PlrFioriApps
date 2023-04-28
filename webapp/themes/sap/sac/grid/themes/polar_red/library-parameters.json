@@ -1,0 +1,18 @@
+{
+	"sapUiSacGridExpandedAboveIcon": "\"\\e1f0\"",
+	"sapUiSacGridExpandedBelowIcon": "\"\\e1ef\"",
+	"sapUiSacGridCollapsedIcon": "\"\\e1ed\"",
+	"sapUiSacGridCursorPointer": "pointer !important",
+	"sapUiSacGridNoDataCursorPointer": "auto !important",
+	"sapUiSacGridTextDecoration": "underline !important",
+	"sapUiSacGridNoDataTextDecoration": "none !important",
+	"sapUiSacGridCellBorder": "1px solid #6a6d70",
+	"sapUiSacGridCellBorderCollapse": "separate",
+	"sapUiSacGridOverflow": "auto !important",
+	"sapUiSacGrid100PerCent": "100%",
+	"sapUiSacGridCellNoFlex": "none",
+	"sapUiSacGridAbsoluteVariance": "rgb(88, 153, 218)",
+	"sapUiSacGridPercentageVariance": "rgb(47, 100, 151)",
+	"sapUiSacGridSpreadsheetSelectionBorderStyle": "dotted",
+	"sapUiSacGridSpreadsheetSelectionBorderWidth": "3px"
+}

@@ -1,0 +1,44 @@
+<mvc:View controllerName="polar.zui5cesantia.controller.FormData"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <VBox id="box" class="sapUiSmallMargin">
+            <f:SimpleForm id="form1" editable="false" layout="ResponsiveGridLayout" title="{i18n>causacion}" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false">
+                <f:content>
+                    <core:Title id="title1" text="{i18n>percausa}" />
+                    <Label id="ldesde" text="{i18n>desde}" />
+                    <Text id="tdesde" text="{formdata>/Begtx}" />
+                    <Label id="lhasta" text="{i18n>hasta}" />
+                    <Text id="thasta" text="{formdata>/Endtx}" />
+                    <core:Title id="title2" text="{i18n>calcdias}" />
+                    <Label id="ldelper" text="{i18n>delper}" />
+                    <Text id="tdelper" text="{formdata>/Dlper}" />
+                    <Label id="lausent" text="{i18n>ausent}" />
+                    <Text id="tausent" text="{formdata>/Ausen}" />
+                    <Label id="lliquida" text="{i18n>liquida}" />
+                    <Text id="tliquida" text="{formdata>/Liqui}" />
+                    <core:Title id="title3" text="{i18n>calcbas}" />
+                    <Label id="lbased" text="{i18n>basdia}" />
+                    <Text id="tbased" text="{formdata>/Based}" />
+                    <Label id="lbasem" text="{i18n>basmen}" />
+                    <Text id="tbasem" text="{formdata>/Basem}" />
+                    <core:Title id="title4" text="{i18n>valcau}" />
+                    <Label id="lcesanp" text="{i18n>cesanp}" />
+                    <Text id="tcesanp" text="{Url}" />
+                    <Label text="{i18n>avanc}" />
+                    <Text text="{Twitter}" />
+                    <Label id="lcesand" text="{i18n>cesand}" />
+                    <Text id="tcesand" text="{formdata>/Cesad}" />
+                    <Label id="linter" text="{i18n>inter}" />
+                    <Text id="tinter" text="{formdata>/Inter}" />
+                </f:content>
+            </f:SimpleForm>
+            <f:SimpleForm id="form2" editable="false" layout="ResponsiveGridLayout" title="Total a girar: {formdata>/Total}" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+            <f:content>
+            </f:content>
+            </f:SimpleForm>
+        </VBox>
+    </Page>
+</mvc:View>

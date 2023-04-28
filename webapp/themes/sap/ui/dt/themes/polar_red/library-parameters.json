@@ -1,0 +1,17 @@
+{
+	"_sap_ui_dt_Overlay_FocusColor": "#000",
+	"_sap_ui_dt_Overlay_TargetZoneColor": "#a0080f",
+	"_sap_ui_dt_Overlay_SelectionColor": "#96bfe8",
+	"_sap_ui_dt_Overlay_CuttedColor": "#f4f4f4",
+	"_sap_ui_dt_Overlay_CuttedBorder": "#a0080f",
+	"_sap_ui_dt_Overlay_HighlightColor": "#660a0e",
+	"_sap_ui_dt_Overlay_ActiveBG": "rgba(160,8,15,0.1)",
+	"_sap_ui_dt_ContextMenu_HoverBGColor": "#feebec",
+	"_sap_ui_dt_ContextMenu_OpenMenuBGColor": "#fae5e6",
+	"_sap_ui_dt_ContextMenu_OpenFocusColor": "#000",
+	"_sap_ui_dt_ContextMenu_MnuItemColor": "#a0080f",
+	"_sap_ui_dt_ContextMenu_OpenSubMenuBG": "#edeff0",
+	"_sap_ui_dt_ContextMenu_Border_Radius": ".25rem",
+	"_sap_ui_dt_ContextMenu_OpenSubMenuBorder": "transparent",
+	"_sap_ui_dt_ContextMenu_Disabled_Hover": "#a0080f"
+}

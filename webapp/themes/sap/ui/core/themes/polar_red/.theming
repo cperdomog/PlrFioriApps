@@ -1,0 +1,26 @@
+{
+	"mVersionDependency": {
+		"UI5.sap/ui/core.sap_fiori_3": "1.112.0",
+		"UI5.sap/ui/core": "1.112.0",
+		"UI5": "1.112.1"
+	},
+	"sEntity": "Theme",
+	"sId": "polar_red",
+	"sLabel": "polar_red",
+	"oExtends": "UI5.sap/ui/core.sap_fiori_3",
+	"aBuildFiles": [
+		"library",
+		"css_variables",
+		"custom"
+	],
+	"aFiles": [
+		"library",
+		"global",
+		"css_variables",
+		"custom"
+	],
+	"sTextDirections": "LTR",
+	"sType": "STANDARD",
+	"sThemability": "PUBLIC",
+	"sReleaseStage": "GENERAL_AVAILABILITY"
+}

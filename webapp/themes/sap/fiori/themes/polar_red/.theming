@@ -1,0 +1,15 @@
+{
+	"mVersionDependency": {
+		"UI5.sap/fiori.sap_fiori_3": "1.112.1",
+		"UI5.sap/fiori": "1.112.1",
+		"UI5": "1.112.1"
+	},
+	"sEntity": "Theme",
+	"sId": "polar_red",
+	"sLabel": "polar_red",
+	"oExtends": "UI5.sap/fiori.sap_fiori_3",
+	"sTextDirections": "LTR",
+	"sType": "STANDARD",
+	"sThemability": "PUBLIC",
+	"sReleaseStage": "GENERAL_AVAILABILITY"
+}
