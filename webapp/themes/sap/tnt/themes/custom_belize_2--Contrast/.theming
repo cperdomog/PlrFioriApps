@@ -1,0 +1,17 @@
+{
+	"mVersionDependency": {
+		"UI5.sap/tnt.sap_belize_plus": "1.112.0",
+		"UI5.sap/tnt": "1.112.0",
+		"UI5": "1.112.0"
+	},
+	"sEntity": "Theme",
+	"sId": "custom_belize_2--Contrast",
+	"oExtends": "UI5.sap/tnt.sap_belize_plus",
+	"aBundled": [
+		"custom_belize_2"
+	],
+	"sBuildOptions": "SKIP",
+	"sType": "ABSTRACT",
+	"sThemability": "PRIVATE",
+	"sReleaseStage": "GENERAL_AVAILABILITY"
+}
