@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "Depuración de retención de la fuente",
-									"targetURL": "#polarzuidepretfuent-display"
+									"targetURL": "#polarzui5depretfuent-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"polarzuidepretfuent-display": {
-								"semanticObject": "polarzuidepretfuent",
+							"polarzui5depretfuent-display": {
+								"semanticObject": "polarzui5depretfuent",
 								"action": "display",
 								"description": "Depuración de retención de la fuente",
 								"title": "Depuración de retención de la fuente",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=polar.zuidepretfuent",
-									"url": sap.ui.require.toUrl("polar/zuidepretfuent")
+									"additionalInformation": "SAPUI5.Component=polar.zui5depretfuent",
+									"url": sap.ui.require.toUrl("polar/zui5depretfuent")
 								}
 							}
 						}

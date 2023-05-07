@@ -13,7 +13,7 @@ sap.ui.define([
     function (Controller, JSONModel, MessageBox, MessageToast) {
         "use strict";
 
-        return Controller.extend("polar.zuidepretfuent.controller.PdfForm", {
+        return Controller.extend("polar.zui5depretfuent.controller.PdfForm", {
             onInit: function () {
                 var oViewModel = new JSONModel();
                 this.getView().setModel(oViewModel, "pdfformView");

@@ -5,12 +5,12 @@
 sap.ui.define([
         "sap/ui/core/UIComponent",
         "sap/ui/Device",
-        "polar/zuidepretfuent/model/models"
+        "polar/zui5depretfuent/model/models"
     ],
     function (UIComponent, Device, models) {
         "use strict";
 
-        return UIComponent.extend("polar.zuidepretfuent.Component", {
+        return UIComponent.extend("polar.zui5depretfuent.Component", {
             metadata: {
                 manifest: "json"
             },

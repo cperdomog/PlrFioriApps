@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Opa5) {
 	"use strict";
 
-	return Opa5.extend("polar.zuidepretfuent.test.integration.arrangements.Startup", {
+	return Opa5.extend("polar.zui5depretfuent.test.integration.arrangements.Startup", {
 
 		iStartMyApp: function (oOptionsParameter) {
 			var oOptions = oOptionsParameter || {};
@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "polar.zuidepretfuent",
+					name: "polar.zui5depretfuent",
 					async: true
 				},
 				hash: oOptions.hash,

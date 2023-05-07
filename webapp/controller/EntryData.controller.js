@@ -13,7 +13,7 @@ sap.ui.define([
     function (Controller, JSONModel, MessageBox, MessageToast) {
         "use strict";
 
-        return Controller.extend("polar.zuidepretfuent.controller.EntryData", {
+        return Controller.extend("polar.zui5depretfuent.controller.EntryData", {
             onInit: function () {
                 var oViewModel = new JSONModel();
                 this.getView().setModel(oViewModel, "entrydataView");

@@ -2,7 +2,7 @@
 
 specVersion: "2.5"
 metadata:
-  name: polar.zuidepretfuent
+  name: polar.zui5depretfuent
 type: application
 server:
   customMiddleware:
@@ -17,9 +17,9 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            url: http://p0pswverp11.netpolar.com:8291
-            client: '101'
-            destination: POLARDEV
+            url: http://dfe.polar:50000
+            client: '001'
+            destination: dfert
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

@@ -1,4 +1,4 @@
-<mvc:View controllerName="polar.zuidepretfuent.controller.PdfForm"
+<mvc:View controllerName="polar.zui5depretfuent.controller.PdfForm"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="pagePdfForm" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">

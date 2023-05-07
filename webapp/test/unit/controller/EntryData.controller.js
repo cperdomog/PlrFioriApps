@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"polar/zuidepretfuent/controller/EntryData.controller"
+	"polar/zui5depretfuent/controller/EntryData.controller"
 ], function (Controller) {
 	"use strict";
 

@@ -8,7 +8,7 @@
 |**Template Used**<br>simple|
 |**Service Type**<br>SAP System (ABAP On Premise)|
 |**Service URL**<br>http://p0pswverp11.netpolar.com:8291/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV
-|**Module Name**<br>zuidepretfuent|
+|**Module Name**<br>zui5depretfuent|
 |**Application Title**<br>Depuración de retención de la fuente|
 |**Namespace**<br>polar|
 |**UI5 Theme**<br>sap_fiori_3|
@@ -17,7 +17,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## zuidepretfuent
+## zui5depretfuent
 
 Depuración de retención de la fuente
 

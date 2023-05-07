@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"polar/zuidepretfuent/test/unit/AllTests"
+		"polar/zui5depretfuent/test/unit/AllTests"
 	], function () {
 		QUnit.start();
 	});

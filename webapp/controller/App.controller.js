@@ -5,7 +5,7 @@ sap.ui.define(
     function(BaseController) {
       "use strict";
   
-      return BaseController.extend("polar.zuidepretfuent.controller.App", {
+      return BaseController.extend("polar.zui5depretfuentttttttt.controller.App", {
         onInit() {
         }
       });

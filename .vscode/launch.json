@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "zuidepretfuent-config1",
+      "name": "zui5depretfuent-config1",
       "cwd": "${workspaceFolder}",
       "runtimeArgs": [
         "fiori",
@@ -22,8 +22,8 @@
       "internalConsoleOptions": "openOnSessionStart",
       "outputCapture": "std",
       "env": {
-        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zuidepretfuent\"}",
-        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"destination\":\"POLARDEV\",\"path\":\"/sap\"}]",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/zui5depretfuent\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"destination\":\"dfert\",\"path\":\"/sap\"}]",
         "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
       }
     }
