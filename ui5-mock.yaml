@@ -17,9 +17,9 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /sap
-            url: http://p0pswverp11.netpolar.com:8291
-            client: '101'
-            destination: POLARDEV
+            url: http://dfe.polar:50000
+            client: '001'
+            destination: dfert
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

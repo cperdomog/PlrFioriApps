@@ -31,9 +31,9 @@ server:
         ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
         backend:
           - path: /sap
-            url: http://p0pswverp11.netpolar.com:8291
-            client: '101'
-            destination: POLARDEV
+            url: http://dfe.polar:50000
+            client: '001'
+            destination: dfert
     - name: sap-fe-mockserver
       beforeMiddleware: csp
       configuration:
