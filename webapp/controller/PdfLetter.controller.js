@@ -30,7 +30,7 @@ sap.ui.define([
                 var clave = "";
                 var pdfViewer = this.getView().byId("letterPdf");
                 pdfViewer.setSource("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/ZHRS_CO_UI_PDFSet(Tipof='"+ tipo +"',Clave='"+ clave +"')/$value");
-                pdfViewer.setTitle("Carta de trabajo");
+                pdfViewer.setTitle("Certificación de ingresos y retenciones");
             },
 
             onValidateService: async  function(myThis){
@@ -47,11 +47,15 @@ sap.ui.define([
                         if (data.results[0].Activ){
                             var oContainer = myThis.getView().byId("SContainer");
                             oContainer.setVisible(true);
+                            var pdfView = myThis.getView().byId("letterPdf");
+                            pdfView.setVisible(true);
                             var messagePage = myThis.getView().byId("messagePage");
                             messagePage.setVisible(false);
                         }else{
                             var oContainer = myThis.getView().byId("SContainer");
                             oContainer.setVisible(false);
+                            var pdfView = myThis.getView().byId("letterPdf");
+                            pdfView.setVisible(false);
                             var messagePage = myThis.getView().byId("messagePage");
                             messagePage.setVisible(true);
                         }

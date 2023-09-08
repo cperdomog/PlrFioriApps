@@ -11,6 +11,6 @@
                 </PDFViewer>
             </FlexBox>
         </ScrollContainer>
-        <MessagePage id="messagePage" showHeader="false" text="Servicio no disponible" icon="sap-icon://message-warning" description="Valide con departamento de RRHH"/>
+        <MessagePage id="messagePage" showHeader="false" text="Servicio no disponible" icon="sap-icon://message-warning" description=" "/>
     </Page>
 </mvc:View>
