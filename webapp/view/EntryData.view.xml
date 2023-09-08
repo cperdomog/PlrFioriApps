@@ -4,7 +4,7 @@
     xmlns:f="sap.ui.layout.form"
     xmlns:l="sap.ui.layout"
     xmlns ="sap.m">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="{i18n>title}" visible="false">
         <VBox id="_IDGenVBox1" class="sapUiSmallMargin">
             <f:SimpleForm id="Form1" editable="false" layout="ResponsiveGridLayout" title="Datos de entrada" singleContainerFullSize="true" columnsXL="1" columnsL="1" columnsM="1">
                 <u:Calendar id="calendar" select="handleCalendarSelect" intervalSelection="true"/>
@@ -23,5 +23,13 @@
                 <Button id="_IDGenButton1" text="{i18n>verForm}" type="Emphasized" icon="sap-icon://pdf-attachment" press="onProcessData"/>
             </OverflowToolbar>
         </footer>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+    <MessagePage showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </MessagePage>
     </Page>
 </mvc:View>

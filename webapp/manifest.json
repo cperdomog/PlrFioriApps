@@ -69,6 +69,13 @@
           "bundleName": "polar.zui5depretfuent.i18n.i18n"
         }
       },
+      "validateserv": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ValidateServ.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
       "entrydata": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/EntryData.json",
@@ -121,7 +128,8 @@
           "viewName": "PdfForm",
           "viewId": "pdfform",
           "viewLevel": 2,
-          "title": "{i18n>PdfFormViewTitle}"
+          "title": "{i18n>PdfFormViewTitle}",
+          "transition": "flip"
         }
       }
     },

@@ -23,6 +23,7 @@ sap.ui.define([
             },
             onObjectMatched: function (oEvent) {
                 var oCalendar = this.byId("calendar");
+                this.onValidateServ(this);  
                 if (sap.ui.Device.system.desktop) {
                     oCalendar.setWidth("50%");
                 }
@@ -58,6 +59,31 @@ sap.ui.define([
                 await this.onValidateData(this);
             },
 
+            onValidateServ: function (myThis) {
+                var oModel = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/");
+                oModel.setHeaders({
+                    "X-Requested-With": "X"
+                });
+                var entryUrl = "/ZHRS_CO_UI_VALIDATE_SERVSet(Servi='04')";
+                oModel.read(entryUrl, {
+                    method: "GET",
+                    success: function (data) {
+                        var oValidateServ = myThis.getOwnerComponent().getModel("validateserv");
+                        oValidateServ.setData(data);
+                        sap.ui.getCore().setModel(oValidateServ);
+                        if (data.Activ) {
+                            myThis.byId('page').setVisible(true);
+                            myThis.byId('pageMessage').setVisible(false);
+                        } else {
+                            myThis.byId('page').setVisible(false);
+                            myThis.byId('pageMessage').setVisible(true);
+                        }
+                    },
+                    error: function () {
+                    }
+                })
+            },
+
             onValidateData: async function (myThis) {
                 var oCalendar = this.byId("calendar");
                 var oSelectedDates = oCalendar.getSelectedDates()[0];
@@ -75,8 +101,8 @@ sap.ui.define([
                         if (data.Typem == 'E') {
                             MessageBox.error(data.Messa);
                         } else {
-                            var begda = data.Begda.slice(0,4) + data.Begda.slice(5,7) + data.Begda.slice(8,10);
-                            var endda = data.Endda.slice(0,4) + data.Endda.slice(5,7) + data.Endda.slice(8,10);
+                            var begda = data.Begda.slice(0, 4) + data.Begda.slice(5, 7) + data.Begda.slice(8, 10);
+                            var endda = data.Endda.slice(0, 4) + data.Endda.slice(5, 7) + data.Endda.slice(8, 10);
                             myThis.getOwnerComponent().getModel("entrydata").setProperty("/Begda", begda);
                             myThis.getOwnerComponent().getModel("entrydata").setProperty("/Endda", endda);
                             var oRouter = sap.ui.core.UIComponent.getRouterFor(myThis),

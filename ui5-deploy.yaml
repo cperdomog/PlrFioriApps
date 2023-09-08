@@ -20,6 +20,6 @@ builder:
           name: ZUI5DEPRETFUENT
           description: Retencion de la fuente
           package: ZHCM_FIORI
-          transport: DFEK900021
+          transport: DFEK900068
         exclude:
           - /test/
