@@ -3,8 +3,8 @@
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <VBox id="box" class="sapUiSmallMargin">
+    <Page id="page" title="{i18n>title}" visible="false">
+        <!--    <VBox id="box" class="sapUiSmallMargin">
             <f:SimpleForm id="form1" editable="false" layout="ResponsiveGridLayout" title="{i18n>causacion}" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false">
                 <f:content>
                     <core:Title id="title1" text="{i18n>percausa}" />
@@ -39,6 +39,19 @@
             <f:content>
             </f:content>
             </f:SimpleForm>
-        </VBox>
+        </VBox> -->
+        <ScrollContainer id="SContainer" height="100%" width="100%" horizontal="true" vertical="true">
+            <FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+                <PDFViewer id="cesantiaPdf" height="600px">
+                    <layoutData>
+                        <FlexItemData growFactor="1" />
+                    </layoutData>
+                </PDFViewer>
+            </FlexBox>
+        </ScrollContainer>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+        <MessagePage showHeader="false" text="Servicio no disponible" enableFormattedText="true" description=" " icon="sap-icon://message-warning">
+        </MessagePage>
     </Page>
 </mvc:View>

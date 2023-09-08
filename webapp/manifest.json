@@ -69,6 +69,13 @@
           "bundleName": "polar.zui5cesantia.i18n.i18n"
         }
       },
+      "validateserv": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ValidateServ.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
       "formdata": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/FormData.json",
