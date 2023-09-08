@@ -1,0 +1,125 @@
+<mvc:View controllerName="polar.zui5aprovacation.controller.VacationRequestAprov"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:m="sap.m"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <m:SplitApp id="idAppSplitControl" initialDetail="detail" initialMaster="master" visible="false">
+        <m:detailPages>
+            <m:Page showHeader="true" id="detail" showNavButton="true" navButtonPress="onPressMasterBack" title="Aprobación de vacaciones">
+                <ObjectPageLayout id="pageLayoutDetail" enableLazyLoading="false" showTitleInHeaderContent="true" showHeaderContent="true">
+                    <headerTitle>
+                        <ObjectPageHeader id="pageHeaderTitle" objectImageURI="" objectTitle="" objectImageShape="Circle" objectSubtitle="" objectImageDensityAware="false" objectImageAlt="" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" showPlaceholder="true" />
+                    </headerTitle>
+                    <headerContent>
+                        <layout:VerticalLayout id="_IDGenVerticalLayout1">
+                            <m:ObjectStatus id="_IDGenObjectStatus1" title="Número de personal" text="{detailvacationrequest>/Solic}" />
+                            <m:ObjectStatus id="vorna" title="Nombres" text="{detailvacationrequest>/VornaSol}" />
+                            <m:ObjectStatus id="nachn" title="Apellidos" text="{detailvacationrequest>/NachnSol}" />
+                            <m:ObjectStatus id="plans" title="Cargo" text="{detailvacationrequest>/PlansSol}" />
+                        </layout:VerticalLayout>
+                    </headerContent>
+                    <sections>
+                        <ObjectPageSection id="_IDGenObjectPageSection1" title="Datos de la solicitud">
+                            <subSections>
+                                <ObjectPageSubSection id="_IDGenObjectPageSubSection1" title="">
+                                    <blocks>
+                                        <m:VBox id="_IDGenVBox1" class="sapUiSmallMargin">
+                                            <f:SimpleForm id="_IDGenSimpleForm1" editable="false" layout="ResponsiveGridLayout" title="" labelSpanXL="4" labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false">
+                                                <f:content>
+                                                    <m:Label id="_IDGenLabel1" text="Fecha de solicitud" labelFor="Solab" />
+                                                    <m:Text id="Solab" text="{ path: 'detailvacationrequest>/Fechs1', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy' }}" />
+                                                    <m:Label id="_IDGenLabel2" text="Fecha de inicio de la vacación" labelFor="Begda" />
+                                                    <m:Text id="Begda" text="{ path: 'detailvacationrequest>/Fecin1', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy' }}" />
+                                                    <m:Label id="_IDGenLabel3" text="Fecha de fin de la vacación" labelFor="Endda" />
+                                                    <m:Text id="Endda" text="{ path: 'detailvacationrequest>/Fecfi1', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy' }}" />
+                                                    <m:Label id="_IDGenLabel4" text="Estatus" labelFor="Testa" />
+                                                    <m:Text id="Testa" text="{detailvacationrequest>/Txtes}" />
+                                                    <core:Title id="_IDGenTitle2" text="" />
+                                                    <m:Label id="_IDGenLabel5" text="Días de disfrute" labelFor="dias_dis" />
+                                                    <m:Text id="dias_dis" text="{detailvacationrequest>/Diasd}" />
+                                                    <m:Label id="_IDGenLabel7" text="Vacaciones en dinero" labelFor="dias_ven" />
+                                                    <m:Text id="dias_ven" text="{detailvacationrequest>/Diasv}" />
+                                                    <m:Label id="_IDGenLabel6" text="Motivo de rechazo si aplica" labelFor="Comen" />
+                                                    <m:TextArea id="Comen" maxLength="140" width="100%" value="{detailvacationrequest>/Comen}" editable="false" />
+                                                </f:content>
+                                            </f:SimpleForm>
+                                        </m:VBox>
+                                    </blocks>
+                                </ObjectPageSubSection>
+                            </subSections>
+                        </ObjectPageSection>
+                        <ObjectPageSection id="_IDGenObjectPageSection2" title="Vacaciones permitidas">
+                            <subSections>
+                                <ObjectPageSubSection id="subsection2" title="">
+                                    <layout:HorizontalLayout id="_IDGenHorizontalLayout1" allowWrapping="true">
+                                        <m:Table id="tableQuota" items="{path: 'listquota>/results'}">
+                                            <m:columns>
+                                                <m:Column id="_IDGenColumn1">
+                                                    <m:Label id="_IDGenLabel16" text="{i18n>period}" />
+                                                </m:Column>
+                                                <m:Column id="_IDGenColumn2" minScreenWidth="Tablet">
+                                                    <m:Label id="_IDGenLabel17" text="{i18n>avaidays}" />
+                                                </m:Column>
+                                                <m:Column id="_IDGenColumn3" minScreenWidth="Tablet">
+                                                    <m:Label id="_IDGenLabel18" text="{i18n>avaidate}" textAlign="Right" />
+                                                </m:Column>
+                                            </m:columns>
+                                            <m:items>
+                                                <m:ColumnListItem id="_IDGenColumnListItem1">
+                                                    <m:cells>
+                                                        <m:Text id="_IDGenText1" text="{listquota>Perid}" />
+                                                        <m:ObjectNumber id="_IDGenObjectNumber2" number="{path: 'listquota>Diasd', type: 'sap.ui.model.type.Integer', formatOptions: { decimals: 0, maxIntegerDigits:2}}" textAlign="Right" state="Success" />
+                                                        <m:Text id="_IDGenText3" text="{path: 'listquota>Fecdi', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}" />
+                                                    </m:cells>
+                                                </m:ColumnListItem>
+                                            </m:items>
+                                        </m:Table>
+                                        <layout:VerticalLayout id="_IDGenVerticalLayout2" />
+                                    </layout:HorizontalLayout>
+                                </ObjectPageSubSection>
+                            </subSections>
+                        </ObjectPageSection>
+                    </sections>
+                </ObjectPageLayout>
+                <m:footer>
+                    <m:OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <m:ToolbarSpacer id="_IDGenToolbarSpacer6" />
+
+                        <m:Button text="Aprobar" id="aprov" press="onProcessVacation" icon="sap-icon://hr-approval" type="Accept" visible="false" />
+                        <m:Button text="Rechazar" id="reject" type="Reject" press="onProcessVacation" icon="sap-icon://employee-rejections" visible="false" />
+                    </m:OverflowToolbar>
+                </m:footer>
+            </m:Page>
+        </m:detailPages>
+        <m:masterPages>
+            <m:Page id="master" showHeader="true">
+                <m:content>
+                    <m:List id="aprovList" items="{path: 'listvacationrequest>/results', sorter:{path:'Fechs1', descending: true}}" growing="true" growingThreshold="10" growingScrollToLoad="false" mode="SingleSelectMaster" itemPress="onSelect" updateFinished="onUpdateFinished">
+                        <m:headerToolbar>
+                            <m:Toolbar id="_IDGenToolbar2">
+                                <m:SearchField id="_IDGenSearchField1" width="100%" search="onFilterPersons" />
+                            </m:Toolbar>
+                        </m:headerToolbar>
+                        <m:items>
+                            <m:ObjectListItem id="_IDGenObjectListItem1" title="{listvacationrequest>Namso}" intro="{path: 'listvacationrequest>Fechs1', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}" number="{listvacationrequest>Diasd}" numberUnit="Días" type="Active">
+                                <m:firstStatus>
+                                    <m:ObjectStatus id="_IDGenObjectStatus2" text="{listvacationrequest>Txtes}" state="{listvacationrequest>Color}" />
+                                </m:firstStatus>
+                            </m:ObjectListItem>
+                        </m:items>
+                    </m:List>
+                </m:content>
+            </m:Page>
+        </m:masterPages>
+    </m:SplitApp>
+    <m:Page id="pageMessage" title="{i18n>title}" visible="false">
+    <m:MessagePage id="_IDGenMessagePage1" showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </m:MessagePage>
+    </m:Page>
+</mvc:View>

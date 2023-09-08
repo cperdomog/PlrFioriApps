@@ -1,0 +1,199 @@
+<mvc:View controllerName="polar.zui5myvacareq.controller.ListVacationRequest"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" visible="false">
+        <IconTabBar id="_IDGenIconTabBar1" class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter id="_IDGenIconTabFilter1" text="Mis Solicitudes" showAll="true" count="{count>/Total}" key="Solic">
+                    <Table id="tableSolic" items="{path: 'listvacatotal>/results'}">
+                        <columns>
+                            <Column>
+                                <Label text="Dias disfrute"/>
+                            </Column>
+                            <Column minScreenWidth="Tablet">
+                                <Label text="Inicio vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Fin de vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Aprobador"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="nAprob"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="Estatus"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="onListVacaTotalPress">
+                                <cells>
+                                    <ObjectNumber number="{listvacatotal>Diasd}" textAlign="Right" state="Success"></ObjectNumber>
+                                    <Text text="{listvacatotal>Fecin1}"/>
+                                    <Text text="{listvacatotal>Fecfi1}"/>
+                                    <Text text="{listvacatotal>Namap}"/>
+                                    <Text text="{listvacatotal>Aprob}" visible="false"/>
+                                    <Text text="{listvacatotal>Estat}" visible="false"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+                <IconTabSeparator id="_IDGenIconTabSeparator1" />
+                <IconTabFilter id="_IDGenIconTabFilter2" icon="sap-icon://complete" iconColor="Positive" count="{count>/TotalProce}" text="Procesadas" key="Proc">
+                    <Table id="tableProce" items="{path: 'listvacaproce>/results'}">
+                        <columns>
+                            <Column>
+                                <Label text="Dias disfrute"/>
+                            </Column>
+                            <Column minScreenWidth="Tablet">
+                                <Label text="Inicio vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Fin de vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Aprobador"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="nAprob"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="Estatus"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="onListVacaProcePress">
+                                <cells>
+                                    <ObjectNumber number="{listvacaproce>Diasd}" textAlign="Right" state="Success"></ObjectNumber>
+                                    <Text text="{listvacaproce>Fecin1}"/>
+                                    <Text text="{listvacaproce>Fecfi1}"/>
+                                    <Text text="{listvacaproce>Namap}"/>
+                                    <Text text="{listvacaproce>Aprob}" visible="false"/>
+                                    <Text text="{listvacaproce>Estat}" visible="false"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+                <IconTabFilter id="_IDGenIconTabFilter3" icon="sap-icon://paper-plane" iconColor="Contrast" count="{count>/TotalSend}" text="Enviadas" key="Send">
+                    <Table id="tableSend" items="{path: 'listvacasend>/results'}">
+                        <columns>
+                            <Column>
+                                <Label text="Dias disfrute"/>
+                            </Column>
+                            <Column minScreenWidth="Tablet">
+                                <Label text="Inicio vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Fin de vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Aprobador"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="nAprob"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="Estatus"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="onListVacaSendPress">
+                                <cells>
+                                    <ObjectNumber number="{listvacasend>Diasd}" textAlign="Right" state="Success"></ObjectNumber>
+                                    <Text text="{listvacasend>Fecin1}"/>
+                                    <Text text="{listvacasend>Fecfi1}"/>
+                                    <Text text="{listvacasend>Namap}"/>
+                                    <Text text="{listvacasend>Aprob}" visible="false"/>
+                                    <Text text="{listvacasend>Estat}" visible="false"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+                <IconTabFilter id="_IDGenIconTabFilter4" icon="sap-icon://accept" iconColor="Positive" count="{count>/TotalAprob}" text="Aprobadas" key="Arob">
+                    <Table id="tableAprob" items="{path: 'listvacaaprob>/results'}">
+                        <columns>
+                            <Column>
+                                <Label text="Dias disfrute"/>
+                            </Column>
+                            <Column minScreenWidth="Tablet">
+                                <Label text="Inicio vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Fin de vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Aprobador"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="nAprob"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="Estatus"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="onListVacaAprobPress">
+                                <cells>
+                                    <ObjectNumber number="{listvacaaprob>Diasd}" textAlign="Right" state="Success"></ObjectNumber>
+                                    <Text text="{listvacaaprob>Fecin1}"/>
+                                    <Text text="{listvacaaprob>Fecfi1}"/>
+                                    <Text text="{listvacaaprob>Namap}"/>
+                                    <Text text="{listvacaaprob>Aprob}" visible="false"/>
+                                    <Text text="{listvacaaprob>Estat}" visible="false"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+                <IconTabFilter id="_IDGenIconTabFilter5" icon="sap-icon://decline" iconColor="Critical" count="{count>/TotalRejec}" text="Rechazadas" key="Rejec">
+                    <Table id="tableReject" items="{path: 'listvacarejec>/results'}">
+                        <columns>
+                            <Column>
+                                <Label text="Dias disfrute"/>
+                            </Column>
+                            <Column minScreenWidth="Tablet">
+                                <Label text="Inicio vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Fin de vacaciones"/>
+                            </Column>
+                            <Column>
+                                <Label text="Aprobador"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="nAprob"/>
+                            </Column>
+                            <Column visible="false">
+                                <Label text="Estatus"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Navigation" press="onListVacaRejecPress">
+                                <cells>
+                                    <ObjectNumber number="{listvacarejec>Diasd}" textAlign="Right" state="Success"></ObjectNumber>
+                                    <Text text="{listvacarejec>Fecin1}"/>
+                                    <Text text="{listvacarejec>Fecfi1}"/>
+                                    <Text text="{listvacarejec>Namap}"/>
+                                    <Text text="{listvacarejec>Aprob}" visible="false"/>
+                                    <Text text="{listvacarejec>Estat}" visible="false"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+    <MessagePage showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </MessagePage>
+    </Page>
+</mvc:View>

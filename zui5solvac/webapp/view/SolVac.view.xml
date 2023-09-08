@@ -1,0 +1,70 @@
+<mvc:View controllerName="polar.zui5solvac.controller.SolVac"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" visible="false">
+        <content>
+            <IconTabBar id="_IDGenIconTabBar1" class="sapUiSmallMarginBottom sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter id="_IDGenIconTabFilter1" text="{i18n>titleM}">
+                        <f:SimpleForm id="_IDGenSimpleForm1" minWidth="1024" maxContainerCols="2" layout="ResponsiveGridLayout">
+                            <f:title>
+                                <core:Title id="_IDGenTitle1" text="{i18n>title}" />
+                            </f:title>
+                            <Label id="_IDGenLabel1" text="Fecha de inicio de vacaciones" labelFor="id_inivac"/>
+                            <DatePicker id="id_inivac" placeholder="{i18n>phdate}" class="sapUiSmallMarginBottom"/>
+                            <Label id="_IDGenLabel8" text="Fecha fin de vacaciones" labelFor="id_finvac"/>
+                            <DatePicker id="id_finvac" editable="false" class="sapUiSmallMarginBottom"/>
+                            <Label id="_IDGenLabel2" text="Días de disfrute" labelFor="id_absdays"/>
+                            <Input id="id_absdays"  type="Number" liveChange="onNumber"/>
+                            <Label id="_IDGenLabel3" text="Vacaciones en dinero" labelFor="id_selldays"/>
+                            <Input id="id_selldays"  type="Number" liveChange="onNumber"/>
+                            <Label id="_IDGenLabel4" text="Autorizador" labelFor="id_aprov"/>
+                            <Input id="id_nameAprov" type="Text" editable="false"/>
+                        </f:SimpleForm>
+                    </IconTabFilter>
+                    <IconTabFilter id="_IDGenIconTabFilter2" text="VACACIONES PERMITIDAS">
+                        <Table id="tableQuota" items="{path: 'listquota>/results'}">
+                            <columns>
+                                <Column id="_IDGenColumn1">
+                                    <Label id="_IDGenLabel5" text="{i18n>period}"/>
+                                </Column>
+                                <Column id="_IDGenColumn2" minScreenWidth="Tablet">
+                                    <Label id="_IDGenLabel6" text="{i18n>avaidays}"/>
+                                </Column>
+                                <Column id="_IDGenColumn3" minScreenWidth="Tablet">
+                                    <Label id="_IDGenLabel7" text="{i18n>avaidate}" textAlign="Right"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem1">
+                                    <cells>
+                                        <Text id="_IDGenText1" text="{listquota>Perid}"/>
+                                        <ObjectNumber id="_IDGenObjectNumber2" number="{path: 'listquota>Diasd', type: 'sap.ui.model.type.Integer', formatOptions: { decimals: 0, maxIntegerDigits:2}}" textAlign="Right" state="Success"></ObjectNumber>
+                                        <Text id="_IDGenText3" text="{path: 'listquota>Fecdi', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>   
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar id="_IDGenOverflowToolbar1">
+                <ToolbarSpacer id="_IDGenToolbarSpacer2"/>
+                <Button id="BtnValid" text="Validar" type="Default" icon="sap-icon://check-availability" press="onValidateVacation"/>
+                <Button id="BtnSend"  text="Enviar solicitud" type="Emphasized" icon="sap-icon://paper-plane" press="onSendVacation"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+    <MessagePage showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </MessagePage>
+    </Page>
+</mvc:View>

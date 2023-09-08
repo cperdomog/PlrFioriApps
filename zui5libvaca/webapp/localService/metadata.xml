@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZHR_CO_FIORI_ESS_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZHRS_CO_UI_CONT_VAC" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Nº personal"/>
+                <Property Name="Perid" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Char"/>
+                <Property Name="Diasd" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Número de días"/>
+                <Property Name="Fecdi" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Fecdt" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Car.8"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_APRO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Proce"/>
+                </Key>
+                <Property Name="Proce" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Casilla de selección"/>
+                <Property Name="Pernr" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Nº personal"/>
+                <Property Name="Ename" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nom.empl./cand."/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_SOLVAC" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Solic"/>
+                    <PropertyRef Name="Namso"/>
+                    <PropertyRef Name="Fechs"/>
+                    <PropertyRef Name="Estat"/>
+                </Key>
+                <Property Name="Solic" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Nº personal"/>
+                <Property Name="Namso" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Nom.empl./cand."/>
+                <Property Name="Fechs" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Estat" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Estatus"/>
+                <Property Name="Txtes" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Car.20"/>
+                <Property Name="Aprob" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Nº personal"/>
+                <Property Name="Namap" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nom.empl./cand."/>
+                <Property Name="Fecin" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Fecfi" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Diasd" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="NUM"/>
+                <Property Name="Diasv" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="NUM"/>
+                <Property Name="Comen" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="Carácter 100"/>
+                <Property Name="Fecar" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Fecmm" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Userm" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Usuario"/>
+                <Property Name="Opcio" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Carácter 01"/>
+                <Property Name="Messa" Type="Edm.String" MaxLength="200" sap:unicode="false" sap:label="Comentario"/>
+                <Property Name="Fechs1" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Fecin1" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Fecfi1" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Color" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Car.20"/>
+                <Property Name="NachnSol" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Apellido"/>
+                <Property Name="VornaSol" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nombre"/>
+                <Property Name="EmailSol" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Char"/>
+                <Property Name="PlansSol" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Char"/>
+                <Property Name="OrgehSol" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Char"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_ORG_DATA" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Nº personal"/>
+                <Property Name="Nachn" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Apellido"/>
+                <Property Name="Vorna" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nombre"/>
+                <Property Name="Birth" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Válido de"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="132" sap:unicode="false" sap:label="Correo electr."/>
+                <Property Name="Exten" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="30 caracteres"/>
+                <Property Name="Plans" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Denominación"/>
+                <Property Name="Orgeh" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Denominación"/>
+                <Property Name="Sname" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Apellido Nombre"/>
+                <Property Name="Photo" Type="Edm.Boolean" sap:unicode="false" sap:label="Casilla de selección"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_LIST_RECIBOS" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Seqnr"/>
+                </Key>
+                <Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Nº de secuencia" sap:creatable="false"/>
+                <Property Name="Perio" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Campo de texto, longitud 10" sap:creatable="false"/>
+                <Property Name="Tperi" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 caracteres" sap:creatable="false"/>
+                <Property Name="Fpbeg" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fe.inic.perío.p." sap:creatable="false"/>
+                <Property Name="Fpend" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fe.fin.Per.para" sap:creatable="false"/>
+                <Property Name="Bondt" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha pago" sap:creatable="false"/>
+                <Property Name="Ocrsn" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Motiv.nóm.espec" sap:creatable="false"/>
+                <Property Name="Motiv" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 caracteres" sap:creatable="false"/>
+                <Property Name="Bruto" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false"/>
+                <Property Name="Deduc" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false"/>
+                <Property Name="Netop" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_PDF" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Tipof"/>
+                    <PropertyRef Name="Clave"/>
+                </Key>
+                <Property Name="Tipof" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Componente del número de versión" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Clave" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Comentario" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mimetype" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Carácter 100" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ZHRT_UI_C_IN_RET" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Begda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Válido de"/>
+                <Property Name="Endda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Válido a"/>
+                <Property Name="Activ" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Activo/Inactivo"/>
+                <Property Name="Formu" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Formulario"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_DEP_FUE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Begda" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Endda" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Typem" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Componente del número de versión"/>
+                <Property Name="Messa" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_CESANTIA" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Begtx"/>
+                    <PropertyRef Name="Endtx"/>
+                </Key>
+                <Property Name="Begtx" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"/>
+                <Property Name="Endtx" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10"/>
+                <Property Name="Dlper" Type="Edm.Byte" sap:unicode="false" sap:label="Int1"/>
+                <Property Name="Ausen" Type="Edm.Byte" sap:unicode="false" sap:label="Int1"/>
+                <Property Name="Labor" Type="Edm.Byte" sap:unicode="false" sap:label="Int1"/>
+                <Property Name="Liqui" Type="Edm.Decimal" Precision="7" Scale="2" sap:unicode="false" sap:label="Cantidad/Unidad"/>
+                <Property Name="Based" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+                <Property Name="Basem" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+                <Property Name="Cesap" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+                <Property Name="Avanc" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+                <Property Name="Cesad" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+                <Property Name="Inter" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+                <Property Name="Total" Type="Edm.Decimal" Precision="16" Scale="3" sap:unicode="false" sap:label="Importe"/>
+            </EntityType>
+            <EntityType Name="ZHRS_CO_UI_HISVAC" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                    <PropertyRef Name="Indis"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Nº personal"/>
+                <Property Name="Begda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Endda" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Indis" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Fidis" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha"/>
+                <Property Name="Didis" Type="Edm.Decimal" Precision="10" Scale="5" sap:unicode="false" sap:label="Cantidad contin."/>
+                <Property Name="Dicom" Type="Edm.Decimal" Precision="10" Scale="5" sap:unicode="false" sap:label="Cantidad contin."/>
+                <Property Name="Diliq" Type="Edm.Decimal" Precision="10" Scale="5" sap:unicode="false" sap:label="Cantidad contin."/>
+                <Property Name="Dipen" Type="Edm.Decimal" Precision="10" Scale="5" sap:unicode="false" sap:label="Cantidad contin."/>
+            </EntityType>
+            <EntityContainer Name="ZHR_CO_FIORI_ESS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZHRS_CO_UI_CONT_VACSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_CONT_VAC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_APROSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_APRO" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_SOLVACSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_SOLVAC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_ORG_DATASet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_ORG_DATA" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_LIST_RECIBOSSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_LIST_RECIBOS" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_PDFSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_PDF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRT_UI_C_IN_RETSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRT_UI_C_IN_RET" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_DEP_FUESet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_DEP_FUE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_CESANTIASet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_CESANTIA" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHRS_CO_UI_HISVACSet" EntityType="ZHR_CO_FIORI_ESS_SRV.ZHRS_CO_UI_HISVAC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://dfe.polar:50000/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://dfe.polar:50000/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

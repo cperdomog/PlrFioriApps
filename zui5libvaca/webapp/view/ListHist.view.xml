@@ -1,0 +1,90 @@
+<mvc:View controllerName="polar.zui5libvaca.controller.ListHist"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" visible="false">
+        <ObjectHeader id="_IDGenObjectHeader1" title="{headeremp>/Sname}" backgroundDesign="Solid">
+            <attributes>
+                <ObjectAttribute id="_IDGenObjectAttribute1" title="Fecha de ingreso" text="{path: 'headeremp>/Feing', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}" />
+            </attributes>
+        </ObjectHeader>
+        <Table id="tableVacationHist" growing="true" growingThreshold="5" items="{path: 'listlibvaca>/results', sorter:{path: 'listlibvaca>Seqnr', descending: true}}">
+            <headerToolbar>
+                <Toolbar id="_IDGenToolbar1">
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                    <SearchField id="searchField" tooltip="Año" search="onFilterPeriodos" width="auto" class="sapUiSmallMargin" placeholder="Año"></SearchField>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column minScreenWidth="Tablet">
+                    <Label text="{i18n>inval}"/>
+                    <footer>
+                        <Text text="Totales" />
+                    </footer>
+                </Column>
+                <Column minScreenWidth="Tablet">
+                    <Label text="{i18n>fival}"/>
+                </Column>
+                <Column>
+                    <Label text="{i18n>indis}"/>
+                </Column>
+                <Column>
+                    <Label text="{i18n>fidis}"/>
+                </Column>
+                <Column>
+                    <Label text="{i18n>didis}"/>
+                    <footer>
+                        <Text id="totDidis" />
+                    </footer>
+                </Column>
+                <Column>
+                    <Label text="{i18n>dicom}"/>
+                    <footer>
+                        <Text id="totDicom" />
+                    </footer>
+                </Column>
+                <Column>
+                    <Label text="{i18n>diliq}"/>
+                    <footer>
+                        <Text id="totDiliq" />
+                    </footer>
+                </Column>
+                <Column minScreenWidth="Tablet">
+                    <Label text="{i18n>dipen}"/>
+                    <footer>
+                        <Text id="totDipen" />
+                    </footer>
+                </Column>
+                <Column visible="false">
+                    <Label text="Año"/>
+                </Column>
+                <Column visible="false">
+                    <Label text="Año"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{path: 'listlibvaca>Begda', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>
+                        <Text text="{path: 'listlibvaca>Endda', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>
+                        <Text text="{path: 'listlibvaca>Indis', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>
+                        <Text text="{path: 'listlibvaca>Fidis', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'dd/MM/yyyy'}}"/>
+                        <Text text="{listlibvaca>Didis}"/>
+                        <Text text="{listlibvaca>Dicom}"/>
+                        <Text text="{listlibvaca>Diliq}"/>
+                        <Text text="{listlibvaca>Dipen}"/>
+                        <Text text="{listlibvaca>Began}" visible="false"/>
+                        <Text text="{listlibvaca>Endan}" visible="false"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+    <MessagePage showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </MessagePage>
+    </Page>
+</mvc:View>

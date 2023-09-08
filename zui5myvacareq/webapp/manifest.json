@@ -1,0 +1,192 @@
+{
+  "_version": "1.17.0",
+  "sap.app": {
+    "id": "polar.zui5myvacareq",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.10.0",
+      "toolsId": "f025185e-969e-43ab-a45c-1405ee8ade39"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.71.50",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "polar.zui5myvacareq.i18n.i18n"
+        }
+      },
+      "validateserv": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ValidateServ.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
+      "count": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/Count.json",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+      },
+      "listquota": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ListQuota.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
+      "listvacaproce": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ListVacaProce.json",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+      },
+      "listvacatotal": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ListVacaTotal.json",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+      },
+      "listvacaaprob": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ListVacaAprob.json",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+      },
+      "listvacasend": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ListVacaSend.json",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+      },
+        "listvacarejec": {
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "model/ListVacaRejec.json",
+          "settings": {
+              "defaultBindingMode": "TwoWay"
+          }
+    },
+    "detailvacationrequest": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/DetailVacationRequest.json",
+        "settings": {
+            "defaultBindingMode": "TwoWay"
+        }
+    }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "polar.zui5myvacareq.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "listvacationrequest",
+          "target": [
+              "listvacationrequest"
+          ]
+        },
+        {
+          "pattern": "DetailVacationRequest",
+          "name": "detailvacationrequest",
+          "target": [
+              "detailvacationrequest"
+          ]
+      }
+      ],
+      "targets": {
+        "listvacationrequest": {
+          "viewName": "ListVacationRequest",
+          "viewId": "ListVacationRequest",
+          "viewLevel": 3,
+          "title": "{i18n>MyVacReqViewTitle}"
+      },
+      "detailvacationrequest": {
+          "viewName": "DetailVacationRequest",
+          "viewId": "DetailVacationRequest",
+          "viewLevel": 4,
+          "title": "{i18n>MyVacReqViewTitle}",
+          "transition": "flip"
+      }
+      }
+    },
+    "rootView": {
+      "viewName": "polar.zui5myvacareq.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
