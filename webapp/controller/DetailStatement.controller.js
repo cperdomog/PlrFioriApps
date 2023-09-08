@@ -25,7 +25,7 @@ sap.ui.define([
                 var dataStatement = tipo + "$" + seqnr;
                 var pdfViewer = this.getView().byId("reciboPdf");
                 pdfViewer.setSource("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/ZHRS_CO_UI_PDFSet(Tipof='"+ tipo +"',Clave='"+ seqnr +"')/$value");
-                pdfViewer.setTitle("Recibo de salario");
+                pdfViewer.setTitle("Volante de pago");
             },
             onNavBack: function () {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this),

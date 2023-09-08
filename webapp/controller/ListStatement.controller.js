@@ -29,7 +29,33 @@ sap.ui.define([
       },
 
       onStartView: function () {
+        this.onValidateServ(this);
         this.onListStatement(this);
+      },
+
+      onValidateServ: function(myThis){
+        var oModel = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/");
+        oModel.setHeaders({
+          "X-Requested-With": "X"
+        });
+        var entryUrl = "/ZHRS_CO_UI_VALIDATE_SERVSet(Servi='02')";
+        oModel.read(entryUrl, {
+          method: "GET",
+          success: function (data) {
+            var oValidateServ = myThis.getOwnerComponent().getModel("validateserv");
+            oValidateServ.setData(data);
+            sap.ui.getCore().setModel(oValidateServ);
+            if (data.Activ){
+              myThis.byId('pageListStatement').setVisible(true);
+              myThis.byId('pageMessage').setVisible(false);
+            }else{
+              myThis.byId('pageListStatement').setVisible(false);
+              myThis.byId('pageMessage').setVisible(true);
+            } 
+            },
+          error: function () {
+          }
+        })  
       },
 
       onFilterPeriodos: function (oEvent) {

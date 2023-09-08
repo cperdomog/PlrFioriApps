@@ -1,7 +1,7 @@
 <mvc:View controllerName="polar.zui5statement.controller.ListStatement"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="pageListStatement" title="{i18n>title}">
+    <Page id="pageListStatement" title="{i18n>title}" visible="false">
         <Table id="tableSalaryStatement" items="{path: 'liststatement>/results', sorter:{path: 'liststatement>Seqnr', descending: true}}">
             <headerToolbar>
                 <Toolbar>
@@ -16,9 +16,6 @@
                 <Column minScreenWidth="Tablet">
                     <Label text="{i18n>tpago}"/>
                 </Column>
-                <Column minScreenWidth="Tablet">
-                    <Label text="{i18n>bruto}" textAlign="Right"/>
-                </Column>
                 <Column>
                     <Label text="{i18n>neto}" textAlign="Right"/>
                 </Column>
@@ -28,11 +25,18 @@
                     <cells>
                         <Text text="{liststatement>Perio}"/>
                         <Text text="{liststatement>Motiv}"/>
-                        <ObjectNumber number="{liststatement>Bruto}" textAlign="Right" state="Warning"></ObjectNumber>
                         <ObjectNumber number="{liststatement>Netop}" textAlign="Right" state="Success"></ObjectNumber>
                     </cells>
                 </ColumnListItem>
             </items>
         </Table>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+    <MessagePage showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </MessagePage>
     </Page>
 </mvc:View>

@@ -69,6 +69,13 @@
           "bundleName": "polar.zui5statement.i18n.i18n"
         }
       },
+      "validateserv": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ValidateServ.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
       "liststatement": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/ListStatement.json",
@@ -124,11 +131,13 @@
           "viewLevel": 1,
           "title": "{i18n>ListStatementViewTitle}"
         },
+
         "detailstatement": {
           "viewName": "DetailStatement",
           "viewId": "detailstatement",
           "viewLevel": 2,
-          "title": "{i18n>DetailStatementViewTitle}"
+          "title": "{i18n>DetailStatementViewTitle}",
+          "transition": "flip"
         }
       }
     },
