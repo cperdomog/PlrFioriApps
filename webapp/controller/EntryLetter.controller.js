@@ -16,8 +16,32 @@ sap.ui.define([
                 sap.ui.core.UIComponent.getRouterFor(this).getRoute("entryletter").attachPatternMatched(this.onObjectMatched, this);
             },
             onObjectMatched: function (oEvent) {
-                
+                this.onValidateServ(this);  
             },
+            onValidateServ: function(myThis){
+                var oModel = new sap.ui.model.odata.v2.ODataModel("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/");
+                oModel.setHeaders({
+                  "X-Requested-With": "X"
+                });
+                var entryUrl = "/ZHRS_CO_UI_VALIDATE_SERVSet(Servi='01')";
+                oModel.read(entryUrl, {
+                  method: "GET",
+                  success: function (data) {
+                    var oValidateServ = myThis.getOwnerComponent().getModel("validateserv");
+                    oValidateServ.setData(data);
+                    sap.ui.getCore().setModel(oValidateServ);
+                    if (data.Activ){
+                      myThis.byId('pageEntryLetter').setVisible(true);
+                      myThis.byId('pageMessage').setVisible(false);
+                    }else{
+                      myThis.byId('pageEntryLetter').setVisible(false);
+                      myThis.byId('pageMessage').setVisible(true);
+                    } 
+                    },
+                  error: function () {
+                  }
+                })  
+              },
             onGetPdf: function(){
                 var oRBGroup = this.getView().byId("rbg1");
                 var selectedIndex = oRBGroup.getSelectedIndex();

@@ -69,6 +69,13 @@
           "bundleName": "polar.zui5letter.i18n.i18n"
         }
       },
+      "validateserv": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/ValidateServ.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
+      },
       "entryletter": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/EntryLetter.json",
@@ -121,7 +128,8 @@
           "viewName": "PdfLetter",
           "viewId": "pdfletter",
           "viewLevel": 2,
-          "title": "{i18n>PdfLetterViewTitle}"
+          "title": "{i18n>PdfLetterViewTitle}",
+          "transition": "flip"
         }
       }
     },

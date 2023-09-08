@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core">
-    <Page id="pageEntryLetter" title="{i18n>title}">
+    <Page id="pageEntryLetter" title="{i18n>title}" visible="false">
         <VBox class="sapUiSmallMargin">
             <f:SimpleForm id="Form1" editable="false" layout="ResponsiveGridLayout" title="Seleccione una opción">
                 <f:content>
@@ -23,5 +23,13 @@
                 <Button text="{i18n>vercarta}" type="Emphasized" icon="sap-icon://pdf-attachment"  press="onGetPdf"/>
             </OverflowToolbar>
         </footer>
+    </Page>
+    <Page id="pageMessage" title="{i18n>title}" visible="false">
+    <MessagePage showHeader="false"
+				 text="Servicio no disponible"
+				 enableFormattedText="true"
+                 description=" "				 
+				 icon="sap-icon://message-warning">
+    </MessagePage>
     </Page>
 </mvc:View>

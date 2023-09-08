@@ -25,7 +25,7 @@ sap.ui.define([
                 var pdfViewer = this.getView().byId("letterPdf");
                 pdfViewer.setSource("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/ZHRS_CO_UI_PDFSet(Tipof='"+ tipo +"',Clave='"+ optionLetter +"')/$value");
 //                pdfViewer.setSource("/sap/opu/odata/sap/ZHR_CO_FIORI_ESS_SRV/ZHRS_CO_UI_PDFSet(Tipof='02',Clave='04')/$value");
-                pdfViewer.setTitle("Carta de trabajo");
+                pdfViewer.setTitle("Certificación laboral");
             },
             onNavBack: function () {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this),
